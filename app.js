@@ -9,7 +9,7 @@
    let total = iva + tips;
 
    console.log(total);
-});
+}); 
   }
   
  // module.exports = calculateBillTotal;
