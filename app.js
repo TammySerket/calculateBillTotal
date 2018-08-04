@@ -1,15 +1,17 @@
- let btn = document.getElementById("boton");
- calculateBillTotal = (preTaxAndTipAmount) => {
-  
-    btn.addEventListener("click", () => {  
+const btn = document.getElementById("boton");
+const resultado = document.getElementById("result");
 
-   preTaxAndTipAmount = document.getElementById("totalBruto").value;     
-   let iva = preTaxAndTipAmount * (0.9,5);
-   let tips = iva * (0.15);
-   let total = iva + tips;
+calculateBillTotal = () => {
+  const preTaxAndTipAmount = document.getElementById("totalBruto").value;     
+   let iva = preTaxAndTipAmount * (0.095);
+   let tips = preTaxAndTipAmount * (0.15);
+   let total = preTaxAndTipAmount + iva + tips;
 
-   console.log(total);
-}); 
+   return total;
+  /* btn.addEventListener("click", () => {
+      return resultado.innerHTML = "El total con IVA y propina es =" + "$" + total;  
+   }); */
   }
+  
   
  // module.exports = calculateBillTotal;
